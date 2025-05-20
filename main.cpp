@@ -14,6 +14,8 @@
 
 using namespace std;
 
+const string filename = "/Users/pro/CLionProjects/JPEG_compression/input_pics/11.jpg";
+
 struct RGB { uint8_t r, g, b; };
 struct YCbCr { float y, cb, cr; };
 
@@ -155,7 +157,7 @@ int main() {
     try {
         // Чтение исходного изображения
         int w, h;
-        vector<RGB> original = read_jpeg("/Users/pro/CLionProjects/JPEG_compression/input.jpeg", w, h);
+        vector<RGB> original = read_jpeg(filename.c_str(), w, h);
         auto start = chrono::high_resolution_clock::now();
 
         // Конвертация в YCbCrц

@@ -1,5 +1,7 @@
 #!/bin/bash
 
+rm -rf benchmark_results
+
 # Создаем папку для результатов
 mkdir -p benchmark_results
 cd benchmark_results
