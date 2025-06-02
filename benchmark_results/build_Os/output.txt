@@ -1,5 +1,5 @@
-YCbCr conversion: 41481 μs
-RGB conversion: 45530 μs
-Time: 161 ms
-MSE: 0.420486
-PSNR: 51.8933 dB
+YCbCr conversion: 34264 μs
+RGB conversion: 33333 μs
+Time: 164 ms
+MSE: 17.2011
+PSNR: 35.7752 dB

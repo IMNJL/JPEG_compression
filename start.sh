@@ -27,6 +27,20 @@ run_benchmark() {
     time_ms=$(grep "^Time:" output.txt | awk '{print $2}')
     echo "${time_ms}" > time_ms.txt
 
+    if [[ "$OSTYPE" == "darwin"* ]]; then
+            # macOS: используем otool
+          otool -tV jpeg_compressor | grep -A 50 'convert_to_ycbcr' > disassembly.txt
+#    else
+#          # Linux: используем objdump
+#          nm jpeg_compressor | grep ' T ' | grep -i convert_to_ycbcr > func_addr.txt
+#          if [ -s func_addr.txt ]; then
+#              addr=$(awk '{print $1}' func_addr.txt)
+#              objdump -d --start-address=0x$addr jpeg_compressor > disassembly.txt
+#          else
+#              echo "Function not found in symbol table." > disassembly.txt
+#          fi
+    fi
+
     # Сохраняем информацию о бинарнике
     ls -lh jpeg_compressor > binary_info.txt
     size=$(stat -f%z jpeg_compressor)

@@ -14,7 +14,7 @@
 
 using namespace std;
 
-const string filename = "/Users/pro/CLionProjects/JPEG_compression/input_pics/11.jpg";
+const string filename = "/Users/pro/CLionProjects/JPEG_compression/input_pics/0.png";
 
 struct RGB { uint8_t r, g, b; };
 struct YCbCr { float y, cb, cr; };

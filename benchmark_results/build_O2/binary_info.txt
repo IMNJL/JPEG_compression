@@ -1,1 +1,1 @@
--rwxr-xr-x@ 1 pro  staff    40K May 20 03:28 jpeg_compressor
+-rwxr-xr-x@ 1 pro  staff    40K May 26 15:52 jpeg_compressor
